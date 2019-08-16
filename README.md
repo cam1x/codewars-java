@@ -1,2 +1,1 @@
-# codewars-java
-Solving problems from www.codewars.com
+# Codewars Solutions (Java)
