@@ -1,0 +1,11 @@
+# Ignore project specific settings
+.idea/
+
+# Compiled class file
+out/
+
+# Ignore Main.java
+Main.java
+
+# Ignore .iml files
+*.iml
