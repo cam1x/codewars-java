@@ -7,6 +7,7 @@ import java.util.*;
  */
 
 public class RemovedNumbers {
+
     public static List<long[]> removNb(long n) {
         long sum=n * (n + 1) / 2;
         List<long[]> list=new ArrayList<>();

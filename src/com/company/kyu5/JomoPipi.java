@@ -8,6 +8,7 @@ import java.util.stream.*;
  */
 
 public class JomoPipi {
+
     public static String jumbledString(String s, long n) {
         StringBuilder sb = new StringBuilder(s);
         List<String> list = new ArrayList<>();

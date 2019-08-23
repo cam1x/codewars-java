@@ -8,6 +8,7 @@ import java.util.regex.*;
  */
 
 public class Bundesliga {
+
     public static String table(String[] results) {
         Pattern clubFinder=Pattern.compile("(\\d.\\s)?[A-Za-z][^\\-]+");
         Pattern scoreFinder=Pattern.compile("[\\d-]+");

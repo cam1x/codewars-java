@@ -5,6 +5,7 @@ package com.company.kyu5;
  */
 
 public class Player {
+
     public Player(int cakes) {
     }
     // Decide who move first - player or opponent (true if player)
