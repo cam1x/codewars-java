@@ -5,8 +5,7 @@ package com.company.kyu6;
  */
 
 public class Dubstep {
-    public static String SongDecoder (String song)
-    {
+    public static String SongDecoder (String song) {
         String[] decoded=song.split("(WUB)+");
         return String.join(" ",decoded).trim();
     }
