@@ -27,7 +27,7 @@ public class Johnann {
         fill(n);
         return katasAnn;
     }
-    
+
     public static long sumJohn(long n) {
         return john(n).stream().mapToLong(Long::longValue).sum();
     }
