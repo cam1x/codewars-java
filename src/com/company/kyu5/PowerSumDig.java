@@ -11,18 +11,20 @@ public class PowerSumDig {
 
     private static final int MAX_POWER = 50;
     private static final long MAX_NUMBER_TO_CHECK = 500;
+    private static final List<Long> resultList = new ArrayList<>();
 
     public static long powerSumDigTerm(int n) {
-        List<Long> resultList = new ArrayList<>();
-        for (int i = 2; i < MAX_NUMBER_TO_CHECK; i++) {
-            for (int j = 2; j < MAX_POWER; j++) {
-                long product = (long) Math.pow(i, j);
-                if (sumOfDigits(product) == i) {
-                    resultList.add(product);
+        if (resultList.size()<n) {
+            for (int i = 2; i < MAX_NUMBER_TO_CHECK; i++) {
+                for (int j = 2; j < MAX_POWER; j++) {
+                    long product = (long) Math.pow(i, j);
+                    if (sumOfDigits(product) == i) {
+                        resultList.add(product);
+                    }
                 }
             }
+            Collections.sort(resultList);
         }
-        Collections.sort(resultList);
         return resultList.get(n - 1);
     }
 
