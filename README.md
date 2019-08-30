@@ -6,7 +6,6 @@
 * [kyu6](https://github.com/cam1x/codewars-java/tree/master/src/com/company/kyu6)
 * [kyu7](https://github.com/cam1x/codewars-java/tree/master/src/com/company/kyu7)
 
-
 ## Kata Ranking (kyu)
 *source: Codewars Wiki Honor & Ranks and Codewars Wiki Kata Ranking*
 
