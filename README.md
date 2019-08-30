@@ -1,7 +1,7 @@
 # Codewars Solutions (Java)
 
 ## My solutions
-* [kyu5](https://github.com/cam1x/codewars-java/tree/master/src/com/company/kyu4)
+* [kyu4](https://github.com/cam1x/codewars-java/tree/master/src/com/company/kyu4)
 * [kyu5](https://github.com/cam1x/codewars-java/tree/master/src/com/company/kyu5)
 * [kyu6](https://github.com/cam1x/codewars-java/tree/master/src/com/company/kyu6)
 * [kyu7](https://github.com/cam1x/codewars-java/tree/master/src/com/company/kyu7)
