@@ -1,6 +1,8 @@
 package com.company.kyu5;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Stream;
 
 /*
@@ -8,13 +10,12 @@ import java.util.stream.Stream;
  */
 
 public class PowerSumDig {
-
     private static final int MAX_POWER = 50;
     private static final long MAX_NUMBER_TO_CHECK = 500;
     private static final List<Long> resultList = new ArrayList<>();
 
     public static long powerSumDigTerm(int n) {
-        if (resultList.size()<n) {
+        if (resultList.size() < n) {
             for (int i = 2; i < MAX_NUMBER_TO_CHECK; i++) {
                 for (int j = 2; j < MAX_POWER; j++) {
                     long product = (long) Math.pow(i, j);
@@ -28,9 +29,9 @@ public class PowerSumDig {
         return resultList.get(n - 1);
     }
 
-    private static long sumOfDigits(long n){
+    private static long sumOfDigits(long n) {
         return Stream.of(Long.toString(n).split(""))
-                .mapToInt(x->Integer.parseInt(x))
+                .mapToInt(x -> Integer.parseInt(x))
                 .sum();
     }
 }

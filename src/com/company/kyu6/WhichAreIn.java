@@ -7,30 +7,29 @@ import java.util.Arrays;
  */
 
 public class WhichAreIn {
-
     public static String[] inArray(String[] array1, String[] array2) {
 
-        int num=array1.length;
+        int num = array1.length;
         boolean isContains;
 
-        for(int i=0;i<array1.length;i++){
-            isContains=false;
-            for(int j=0;j<array2.length;j++){
-                if(array2[j].indexOf(array1[i])!=-1){
-                    isContains=true;
+        for (int i = 0; i < array1.length; i++) {
+            isContains = false;
+            for (String s : array2) {
+                if (s.contains(array1[i])) {
+                    isContains = true;
                     break;
                 }
             }
-            if(!isContains){
+            if (!isContains) {
                 num--;
-                array1[i]=" ";
+                array1[i] = " ";
             }
         }
 
-        String[] res=new String[num];
-        for(int i=0,j=0;i<array1.length;i++){
-            if(array1[i]!=" "){
-                res[j]=array1[i];
+        String[] res = new String[num];
+        for (int i = 0, j = 0; i < array1.length; i++) {
+            if (!array1[i].equals(" ")) {
+                res[j] = array1[i];
                 j++;
             }
         }

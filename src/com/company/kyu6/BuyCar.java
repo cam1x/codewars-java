@@ -5,16 +5,15 @@ package com.company.kyu6;
  */
 
 public class BuyCar {
-
     public static int[] nbMonths(int startPriceOld, int startPriceNew, int savingPerMonth, double percentLossByMonth) {
 
         int months = 0;
-        double moneyLeft = 0;
+        double moneyLeft;
         double priceOld = startPriceOld;
         double priceNew = startPriceNew;
         double savings = 0;
 
-        while ((priceOld + savings) < priceNew){
+        while ((priceOld + savings) < priceNew) {
             months++;
 
             if (months % 2 == 0) {

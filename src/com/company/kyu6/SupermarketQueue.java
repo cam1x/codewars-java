@@ -5,7 +5,6 @@ package com.company.kyu6;
  */
 
 public class SupermarketQueue {
-
     public static int solveSuperMarketQueue(int[] customers, int n) {
         int[] cashBox = new int[n];
         int indexOfCash = 0;

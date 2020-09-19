@@ -5,16 +5,14 @@ package com.company.kyu6;
  */
 
 public class FindTheMissingNumber {
-
-    public static char findMissingLetter(char[] array)
-    {
-        int time=array[0];
-        for(int i=1;i<array.length;i++){
-            if( (int)array[i]!=time+1 ){
+    public static char findMissingLetter(char[] array) {
+        int time = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if ((int) array[i] != time + 1) {
                 break;
             }
             time++;
         }
-        return (char)(time+1);
+        return (char) (time + 1);
     }
 }

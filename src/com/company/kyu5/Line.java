@@ -5,13 +5,12 @@ package com.company.kyu5;
  */
 
 public class Line {
-
     public static String WhoIsNext(String[] names, int n) {
         int numOfClons = 1;
         while (names.length * numOfClons < n) {
             n -= numOfClons * names.length;
             numOfClons *= 2;
         }
-        return names[(n-1)/numOfClons];
+        return names[(n - 1) / numOfClons];
     }
 }

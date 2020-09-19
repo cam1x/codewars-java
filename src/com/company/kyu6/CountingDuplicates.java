@@ -13,7 +13,9 @@ public class CountingDuplicates {
                         .toArray(Character[]::new));
         for (char ch : text.toCharArray()) {
             if (java.util.Collections.frequency(arr, ch) > 1) {
-                if (!duplicateLetters.contains(ch)) { duplicateLetters.add(ch); }
+                if (!duplicateLetters.contains(ch)) {
+                    duplicateLetters.add(ch);
+                }
             }
         }
         return duplicateLetters.size();

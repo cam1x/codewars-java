@@ -5,16 +5,15 @@ package com.company.kyu6;
  */
 
 public class ConvertToCamelCase {
-
-    public static String toCamelCase(String s){
-        StringBuilder camelCase=new StringBuilder();
+    public static String toCamelCase(String s) {
+        StringBuilder camelCase = new StringBuilder();
         char current;
-        for(int i=0;i<s.length();i++){
-            current=s.charAt(i);
-            if(current=='-' || current=='_'){
+        for (int i = 0; i < s.length(); i++) {
+            current = s.charAt(i);
+            if (current == '-' || current == '_') {
                 i++;
                 camelCase.append(Character.toUpperCase(s.charAt(i)));
-            }else{
+            } else {
                 camelCase.append(current);
             }
         }

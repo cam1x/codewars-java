@@ -5,11 +5,10 @@ package com.company.kyu5;
  */
 
 public class Bud {
-
     public static String buddy(long start, long limit) {
-        for (long i=start;i<limit;i++){
-            final long secondNum =divSum(i)-1;
-            if (secondNum>i){
+        for (long i = start; i < limit; i++) {
+            final long secondNum = divSum(i) - 1;
+            if (secondNum > i) {
                 long secondSum = divSum(secondNum);
                 if (secondSum - 1 == i) {
                     return "(" + i + " " + secondNum + ")";
@@ -25,8 +24,7 @@ public class Bud {
             if (num % i == 0) {
                 if (i == (num / i)) {
                     result += i;
-                }
-                else {
+                } else {
                     result += (i + num / i);
                 }
             }

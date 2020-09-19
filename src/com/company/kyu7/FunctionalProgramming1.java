@@ -7,18 +7,20 @@ import java.util.function.Function;
  */
 
 public class FunctionalProgramming1 {
-    public static Function<Student, Boolean> f = (student)->{ return student.getFullName().equals("John Smith") && student.studentNumber.equals("js123"); };//Make me a function; remember to set the types!
+    public static Function<Student, Boolean> f =
+            (student) -> student.getFullName().equals("John Smith") &&
+                    student.studentNumber.equals("js123");
 }
 
 class Student {
+    public final String studentNumber;
     private final String firstName;
     private final String lastName;
-    public final String studentNumber;
 
-    public Student(String firstName,String lastName,String studentNumber){
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.studentNumber=studentNumber;
+    public Student(String firstName, String lastName, String studentNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.studentNumber = studentNumber;
     }
 
     public String getFullName() {

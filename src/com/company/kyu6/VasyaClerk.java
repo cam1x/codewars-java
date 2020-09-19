@@ -5,24 +5,17 @@ package com.company.kyu6;
  */
 
 public class VasyaClerk {
-
     public static String Tickets(int[] peopleInLine) {
         int[] cash = new int[]{0, 0, 0};
 
-        for (int i = 0; i < peopleInLine.length; i++) {
-            switch (peopleInLine[i]) {
-                case 25: {
-                    cash[0]++;
-                    break;
-                }
-
-                case 50: {
+        for (int value : peopleInLine) {
+            switch (value) {
+                case 25 -> cash[0]++;
+                case 50 -> {
                     cash[0]--;
                     cash[1]++;
-                    break;
                 }
-
-                case 100: {
+                case 100 -> {
                     if (cash[1] > 0) {
                         cash[1]--;
                     } else {
@@ -30,7 +23,6 @@ public class VasyaClerk {
                     }
 
                     cash[0]--;
-                    break;
                 }
             }
 

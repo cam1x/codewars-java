@@ -5,15 +5,14 @@ package com.company.kyu5;
  */
 
 public class GapInPrimes {
-
     public static long[] gap(int g, long m, long n) {
-        for (long i=m;i<=n;i++){
+        for (long i = m; i <= n; i++) {
             long nextPrime;
-            if (isPrime(i) && (nextPrime=generateNextPrime(i,n))!=-1){
-                if (nextPrime-i==g){
-                    return new long[]{i,nextPrime};
+            if (isPrime(i) && (nextPrime = generateNextPrime(i, n)) != -1) {
+                if (nextPrime - i == g) {
+                    return new long[]{i, nextPrime};
                 }
-                i=nextPrime-1;
+                i = nextPrime - 1;
             }
         }
         return null;
@@ -28,8 +27,8 @@ public class GapInPrimes {
         return true;
     }
 
-    private static long generateNextPrime(final long START,final long END){
-        for (long i=START+1;i<=END;i++){
+    private static long generateNextPrime(final long START, final long END) {
+        for (long i = START + 1; i <= END; i++) {
             if (isPrime(i)) {
                 return i;
             }
@@ -38,9 +37,9 @@ public class GapInPrimes {
     }
 
     public static void main(String[] args) {
-        long[] res=gap(6,100,110);
-        for (long el:res){
-            System.out.print(el+" ");
+        long[] res = gap(6, 100, 110);
+        for (long el : res != null ? res : new long[0]) {
+            System.out.print(el + " ");
         }
     }
 }

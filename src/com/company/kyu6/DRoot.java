@@ -5,18 +5,18 @@ package com.company.kyu6;
  */
 
 public class DRoot {
-    public static int sumOfDigits(int num){
-        int sum=0;
-        while(num>0){
-            sum+=num%10;
-            num/=10;
+    public static int sumOfDigits(int num) {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
         }
         return sum;
     }
 
     public static int digital_root(int n) {
-        while(n>10){
-            n=sumOfDigits(n);
+        while (n > 10) {
+            n = sumOfDigits(n);
         }
         return n;
     }

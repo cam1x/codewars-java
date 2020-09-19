@@ -5,9 +5,7 @@ package com.company.kyu6;
  */
 
 public class SumOfTwo {
-
-    public static int add(int x, int y)
-    {
+    public static int add(int x, int y) {
         if (y == 0) return x;
         int t = x ^ y;
         int carry = (x & y) << 1;

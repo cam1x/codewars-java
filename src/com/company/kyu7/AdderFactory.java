@@ -13,6 +13,6 @@ public class AdderFactory {
      * adds "addTo" to that integer, and returns the result as an integer (integer-to-integer function).
      */
     public static IntUnaryOperator create(int addTo) {
-        return num->num+addTo;
+        return num -> num + addTo;
     }
 }

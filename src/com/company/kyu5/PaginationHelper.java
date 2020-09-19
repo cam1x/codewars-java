@@ -1,44 +1,45 @@
 package com.company.kyu5;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /*
     Condition: https://www.codewars.com/kata/515bb423de843ea99400000a
  */
 
 public class PaginationHelper<I> {
-
-    private Map<Integer,List<I>> catalog=new HashMap<Integer, List<I>>();
-    private int itemsPerPage;
+    private final Map<Integer, List<I>> catalog = new HashMap<Integer, List<I>>();
+    private final int itemsPerPage;
 
     /**
      * The constructor takes in an array of items and a integer indicating how many
      * items fit within a single page
      */
     public PaginationHelper(List<I> collection, int itemsPerPage) {
-        int page=0;
-        for (int i=0;i<collection.size();i++){
+        int page = 0;
+        for (I value : collection) {
             if (!catalog.containsKey(page)) {
                 catalog.put(page, new ArrayList<I>());
-                catalog.get(page).add(collection.get(i));
             } else {
-                if (catalog.get(page).size() > itemsPerPage-1) {
+                if (catalog.get(page).size() > itemsPerPage - 1) {
                     page++;
                     catalog.put(page, new ArrayList<I>());
                 }
-                catalog.get(page).add(collection.get(i));
             }
+            catalog.get(page).add(value);
         }
-        this.itemsPerPage=itemsPerPage;
+        this.itemsPerPage = itemsPerPage;
     }
 
     /**
      * returns the number of items within the entire collection
      */
     public int itemCount() {
-        int count=0;
-        for (int i=0;i<pageCount();i++){
-            count+=catalog.get(i).size();
+        int count = 0;
+        for (int i = 0; i < pageCount(); i++) {
+            count += catalog.get(i).size();
         }
         return count;
     }
@@ -55,9 +56,9 @@ public class PaginationHelper<I> {
      * this method should return -1 for pageIndex values that are out of range
      */
     public int pageItemCount(int pageIndex) {
-        if (pageIndex>=0 && pageIndex<pageCount()){
+        if (pageIndex >= 0 && pageIndex < pageCount()) {
             return catalog.get(pageIndex).size();
-        }else{
+        } else {
             return -1;
         }
     }
@@ -67,6 +68,6 @@ public class PaginationHelper<I> {
      * this method should return -1 for itemIndex values that are out of range
      */
     public int pageIndex(int itemIndex) {
-        return (itemIndex>=0 && itemIndex<itemCount())? itemIndex/itemsPerPage : -1;
+        return (itemIndex >= 0 && itemIndex < itemCount()) ? itemIndex / itemsPerPage : -1;
     }
 }

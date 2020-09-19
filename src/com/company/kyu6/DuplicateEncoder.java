@@ -5,22 +5,21 @@ package com.company.kyu6;
  */
 
 public class DuplicateEncoder {
-
-    public static boolean isUnique(String word, char letter){
-        word=word.toLowerCase();
-        letter=Character.toLowerCase(letter);
+    public static boolean isUnique(String word, char letter) {
+        word = word.toLowerCase();
+        letter = Character.toLowerCase(letter);
         return word.indexOf(letter) == word.lastIndexOf(letter);
     }
 
-    public static String encode(String word){
-        String encoded=new String();
-        for(int i=0;i<word.length();i++){
-            if(isUnique(word,word.charAt(i))){
-                encoded+="(";
-            }else{
-                encoded+=")";
+    public static String encode(String word) {
+        StringBuilder encoded = new StringBuilder();
+        for (int i = 0; i < word.length(); i++) {
+            if (isUnique(word, word.charAt(i))) {
+                encoded.append("(");
+            } else {
+                encoded.append(")");
             }
         }
-        return encoded;
+        return encoded.toString();
     }
 }

@@ -5,28 +5,27 @@ package com.company.kyu6;
  */
 
 public class ConsecutiveStrings {
-
     public static String longestConsec(String[] strarr, int k) {
-        if(strarr.length==0 || k>strarr.length || k<=0){
+        if (k > strarr.length || k <= 0) {
             return "";
         }
 
-        int startIndex=0;
+        int startIndex = 0;
         int currLength;
-        int maxLength=0;
-        for(int i=0;i<=strarr.length-k;i++){
-            currLength=0;
-            for(int j=i;j<i+k;j++){
-                currLength+=strarr[j].length();
+        int maxLength = 0;
+        for (int i = 0; i <= strarr.length - k; i++) {
+            currLength = 0;
+            for (int j = i; j < i + k; j++) {
+                currLength += strarr[j].length();
             }
-            if(maxLength<currLength){
-                maxLength=currLength;
-                startIndex=i;
+            if (maxLength < currLength) {
+                maxLength = currLength;
+                startIndex = i;
             }
         }
 
-        StringBuilder result=new StringBuilder();
-        for(int i=startIndex;i<startIndex+k;i++){
+        StringBuilder result = new StringBuilder();
+        for (int i = startIndex; i < startIndex + k; i++) {
             result.append(strarr[i]);
         }
 

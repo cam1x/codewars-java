@@ -5,26 +5,25 @@ package com.company.kyu6;
  */
 
 public class ValidateCreditCard {
-
-    public static boolean validate(String n){
-        int[] numbers=new int[n.length()];
-        for(int i=0;i<numbers.length;i++){
-            numbers[i]=Character.getNumericValue(n.charAt(i));
+    public static boolean validate(String n) {
+        int[] numbers = new int[n.length()];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = Character.getNumericValue(n.charAt(i));
         }
 
-        for(int i=numbers.length-2;i>=0;i-=2){
-            numbers[i]*=2;
-            if(numbers[i]>9){
-                numbers[i]-=9;
+        for (int i = numbers.length - 2; i >= 0; i -= 2) {
+            numbers[i] *= 2;
+            if (numbers[i] > 9) {
+                numbers[i] -= 9;
             }
         }
 
-        int sum=0;
+        int sum = 0;
 
-        for(int i=0;i<numbers.length;i++){
-            sum+=numbers[i];
+        for (int number : numbers) {
+            sum += number;
         }
 
-        return sum%10==0;
+        return sum % 10 == 0;
     }
 }

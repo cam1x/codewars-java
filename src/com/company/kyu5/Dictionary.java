@@ -1,6 +1,7 @@
 package com.company.kyu5;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.stream.IntStream;
 
 /*
@@ -8,7 +9,6 @@ import java.util.stream.IntStream;
  */
 
 public class Dictionary {
-
     private final String[] words;
 
     public Dictionary(String[] words) {
@@ -17,7 +17,7 @@ public class Dictionary {
 
     public String findMostSimilar(String to) {
         return Arrays.stream(words)
-                .min(Comparator.comparingInt(str->getSimilarPoint(str,to)))
+                .min(Comparator.comparingInt(str -> getSimilarPoint(str, to)))
                 .get();
     }
 

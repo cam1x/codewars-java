@@ -7,7 +7,6 @@ import java.math.BigDecimal;
  */
 
 public class Suite {
-
     public static double going(int n) {
         BigDecimal factorial = BigDecimal.ONE.setScale(6, BigDecimal.ROUND_UNNECESSARY);
         BigDecimal sum = BigDecimal.ZERO.setScale(6, BigDecimal.ROUND_UNNECESSARY);

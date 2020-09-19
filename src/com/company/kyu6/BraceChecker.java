@@ -4,21 +4,20 @@ package com.company.kyu6;
     Condition: https://www.codewars.com/kata/5277c8a221e209d3f6000b56
  */
 
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class BraceChecker {
-
     public boolean isValid(String braces) {
         Deque<Character> open = new LinkedList<>();
 
-        for(int i = 0; i < braces.length(); i++) {
+        for (int i = 0; i < braces.length(); i++) {
             char current = braces.charAt(i);
             char openBrace = getOpenBrace(current);
 
-            if(openBrace == 0) {
+            if (openBrace == 0) {
                 open.push(current);
-            }
-            else {
+            } else {
                 if (open.isEmpty() || open.pop() != openBrace) {
                     return false;
                 }
@@ -28,11 +27,11 @@ public class BraceChecker {
     }
 
     public char getOpenBrace(char closeBrace) {
-        switch(closeBrace) {
-            case ')': return '(';
-            case ']': return '[';
-            case '}': return '{';
-        }
-        return 0;
+        return switch (closeBrace) {
+            case ')' -> '(';
+            case ']' -> '[';
+            case '}' -> '{';
+            default -> '0';
+        };
     }
 }

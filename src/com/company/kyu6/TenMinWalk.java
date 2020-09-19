@@ -6,7 +6,7 @@ package com.company.kyu6;
 
 public class TenMinWalk {
     public static boolean isValid(char[] walk) {
-        if(walk.length!=10){
+        if (walk.length != 10) {
             return false;
         }
 
@@ -15,20 +15,11 @@ public class TenMinWalk {
 
         for (char direction : walk) {
             switch (direction) {
-                case 'n':
-                    northSouthPosition++;
-                    break;
-                case 'e':
-                    westEastPosition++;
-                    break;
-                case 's':
-                    northSouthPosition--;
-                    break;
-                case 'w':
-                    westEastPosition--;
-                    break;
-                default:
-                    throw new IllegalStateException("Unknown direction: " + direction);
+                case 'n' -> northSouthPosition++;
+                case 'e' -> westEastPosition++;
+                case 's' -> northSouthPosition--;
+                case 'w' -> westEastPosition--;
+                default -> throw new IllegalStateException("Unknown direction: " + direction);
             }
         }
 

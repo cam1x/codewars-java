@@ -5,16 +5,15 @@ package com.company.kyu5;
  */
 
 public class PerfectPower {
-
     public static int[] isPerfectPower(int n) {
-        int num=0, power=0, time=n;
-        for (int i=2;i<=(int)Math.sqrt(n);i++){
-            while(time%i == 0 && time > 1) {
-                time/=i;
+        int power = 0, time = n;
+        for (int i = 2; i <= (int) Math.sqrt(n); i++) {
+            while (time % i == 0 && time > 1) {
+                time /= i;
                 power++;
             }
-            if(time == 1) {
-                return new int[] {i,power};
+            if (time == 1) {
+                return new int[]{i, power};
             }
             time = n;
             power = 0;

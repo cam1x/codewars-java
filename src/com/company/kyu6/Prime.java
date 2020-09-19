@@ -7,11 +7,11 @@ package com.company.kyu6;
 public class Prime {
     public static boolean isPrime(int num) {
         boolean prime;
-        if(num<=1) prime=false;
+        if (num <= 1) prime = false;
         else {
             prime = true;
             int i = 2;
-            while (i*i<=num) {
+            while (i * i <= num) {
                 if (num % i != 0) {
                     i++;
                 } else {

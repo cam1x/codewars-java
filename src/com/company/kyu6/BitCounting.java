@@ -5,14 +5,13 @@ package com.company.kyu6;
  */
 
 public class BitCounting {
-
-    public static int countBits(int n){
-        int bits=0;
-        while(n>0){
-            if(n%2==1){
+    public static int countBits(int n) {
+        int bits = 0;
+        while (n > 0) {
+            if (n % 2 == 1) {
                 bits++;
             }
-            n>>=1;
+            n >>= 1;
         }
         return bits;
     }

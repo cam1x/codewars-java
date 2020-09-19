@@ -1,17 +1,17 @@
 package com.company.kyu5;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /*
     Condition: https://www.codewars.com/kata/52a89c2ea8ddc5547a000863
  */
 
 public class LoopInspector {
-
     public int loopSize(Node node) {
         Node myNode = node;
         Set<Node> setOfNodes = new HashSet<>();
-        for(int i = 0; i < Integer.MAX_VALUE ; i++) {
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
             if (!setOfNodes.add(myNode)) {
                 Node startNode = myNode;
                 int counter;

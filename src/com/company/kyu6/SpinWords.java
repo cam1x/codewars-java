@@ -5,20 +5,19 @@ package com.company.kyu6;
  */
 
 public class SpinWords {
-
     public String spinWords(String sentence) {
-        String[] words=sentence.split(" ");
-        String string=new String();
+        String[] words = sentence.split(" ");
+        StringBuilder string = new StringBuilder();
         StringBuilder str;
 
-        for(int i=0;i<words.length;i++){
-            if(words[i].length()>=5){
-                str=new StringBuilder(words[i]);
-                string+=str.reverse().toString()+" ";
-            }else{
-                string+=words[i]+" ";
+        for (String word : words) {
+            if (word.length() >= 5) {
+                str = new StringBuilder(word);
+                string.append(str.reverse().toString()).append(" ");
+            } else {
+                string.append(word).append(" ");
             }
         }
-        return string.substring(0,string.length()-1);
+        return string.substring(0, string.length() - 1);
     }
 }

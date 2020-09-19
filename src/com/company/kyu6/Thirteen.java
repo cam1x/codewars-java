@@ -5,22 +5,21 @@ package com.company.kyu6;
  */
 
 class Thirteen {
-
-    public static long calc(long n){
-        int[] divisions={1,10,9,12,3,4};
-        long thirt=0;
-        int j=0;
-        while(n>0){
-            thirt+=(n%10)*divisions[j];
-            n/=10;
-            j=(j+1)%6;
+    public static long calc(long n) {
+        int[] divisions = {1, 10, 9, 12, 3, 4};
+        long thirt = 0;
+        int j = 0;
+        while (n > 0) {
+            thirt += (n % 10) * divisions[j];
+            n /= 10;
+            j = (j + 1) % 6;
         }
         return thirt;
     }
 
     public static long thirt(long n) {
-        while(n!=calc(n)){
-            n=calc(n);
+        while (n != calc(n)) {
+            n = calc(n);
         }
         return n;
     }

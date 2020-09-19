@@ -1,6 +1,7 @@
 package com.company.kyu5;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /*
@@ -8,17 +9,16 @@ import java.util.stream.Collectors;
  */
 
 public class Dioph {
-
     public static String solEquaStr(long n) {
-        List<String> solutions=new ArrayList<>();
+        List<String> solutions = new ArrayList<>();
         long x, y, b;
-        for (long a=1;a<=Math.sqrt(n);a++){
-            x=(n/a+a)/2;
-            y=(n/a-a)/4;
-            if (x*x -4*y*y==n){
-                solutions.add("["+(n/a+a)/2+", "+(n/a-a)/4+"]");
+        for (long a = 1; a <= Math.sqrt(n); a++) {
+            x = (n / a + a) / 2;
+            y = (n / a - a) / 4;
+            if (x * x - 4 * y * y == n) {
+                solutions.add("[" + (n / a + a) / 2 + ", " + (n / a - a) / 4 + "]");
             }
         }
-        return solutions.stream().distinct().collect(Collectors.joining(", ","[","]"));
+        return solutions.stream().distinct().collect(Collectors.joining(", ", "[", "]"));
     }
 }

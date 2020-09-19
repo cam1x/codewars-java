@@ -5,11 +5,10 @@ package com.company.kyu5;
  */
 
 public class HumanReadableTime {
-
     public static String makeReadable(int seconds) {
-        int hours=seconds/3600;
-        int min=(seconds-hours*3600)/60;
-        int sec=seconds-hours*3600-min*60;
+        int hours = seconds / 3600;
+        int min = (seconds - hours * 3600) / 60;
+        int sec = seconds - hours * 3600 - min * 60;
         return String.format("%02d:%02d:%02d", hours, min, sec);
     }
 }
